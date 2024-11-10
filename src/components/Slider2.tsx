@@ -11,7 +11,7 @@ const Slider2: React.FC = () => {
     
     // Initial slider/input values
     const [value, setValue] = useState<number>(1500);
-    const MAX = 10_500;
+    const MAX = 5000;
     const MIN = 0;
 
     // Handle changes on Slider
@@ -35,47 +35,59 @@ const Slider2: React.FC = () => {
     }
 
     return(
-        <div>
-            <h2> Square Foot Selection:</h2>
-            <Slider
-                value = {value}
-                step = {100}
-                onChange = {handleSliderChange}
-                aria-labelledby='squarefoot-slider'
-                min = {MIN}
-                max = {MAX}
-                valueLabelDisplay="auto"
-            />
-            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Typography
-                    variant="body2"
-                >
-                    {MIN} sqft
-                </Typography>
-                <Typography
-                    variant="body2"
-                 >
-                    {MAX} sqft
-                </Typography>
-            </Box>
-
-            {/* Input Box */}
-            <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-                <OutlinedInput
-                    id="outlined-adornment-weight"
-                    endAdornment={<InputAdornment position="end">sqft</InputAdornment>}
-                    aria-describedby="outlined-weight-helper-text"
-                    value={value}
-                    onChange={handleInputChange}
-                    onBlur={handleSliderRange}
-                    inputProps={{
-                    'aria-labelledby': "input-slider"
+        <Box
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+            }}
+        >
+            <Box sx={{ width: '100%', maxWidth: '500px', mt: 1 }}>
+                <Typography 
+                    variant="h6" 
+                    sx={{ 
+                        textAlign: 'center',
+                        mt: 2
                     }}
-                />
-                <FormHelperText id="outlined-weight-helper-text">Square Foot</FormHelperText>
-            </FormControl>
+                >
+                    Square Foot Selection
+                </Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                    <Box sx={{ flex: 1 }}>
+                        <Slider
+                            value={value}
+                            step={100}
+                            onChange={handleSliderChange}
+                            aria-labelledby='squarefoot-slider'
+                            min={MIN}
+                            max={MAX}
+                            valueLabelDisplay="auto"
+                        />
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <Typography variant="body2">{MIN} sqft</Typography>
+                            <Typography variant="body2">{MAX} sqft</Typography>
+                        </Box>
+                    </Box>
 
-        </div>
+                    <FormControl sx={{ width: '120px' }} variant="outlined">
+                        <OutlinedInput
+                            id="outlined-adornment-weight"
+                            endAdornment={<InputAdornment position="end">sqft</InputAdornment>}
+                            aria-describedby="outlined-weight-helper-text"
+                            value={value}
+                            onChange={handleInputChange}
+                            onBlur={handleSliderRange}
+                            inputProps={{
+                                'aria-labelledby': "input-slider"
+                            }}
+                            size="small"
+                        />
+                        <FormHelperText id="outlined-weight-helper-text"> </FormHelperText>
+                    </FormControl>
+                </Box>
+            </Box>
+        </Box>
     );
 };
 
