@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Slider, TextField, Select, MenuItem, Input, FormControl, InputLabel, Chip, SelectChangeEvent } from '@mui/material';
 import { Card, CardContent, CardHeader} from '@mui/material';
-// import {ToggleButton} from '@mui/material';
 import Slider2 from './/Slider2';
-import ToggleButton from './/ToggleButton';
+import ToggleUnitType from './/ToggleUnitType';
+
 // type DashboardProps = {
 //   calculationMode: 'household' | 'small business';
 //   items: string[];
@@ -109,7 +109,7 @@ const SavingsVisualizer: React.FC<VisualizerProps> = ({
   // function body here
   return (
     <div>
-      <ToggleButton />
+      <ToggleUnitType />
       <p>Savings Visualizer Rocks !</p>
       {/* <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" /> */}
       <Slider2 />

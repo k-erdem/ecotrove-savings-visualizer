@@ -11,7 +11,7 @@ const Slider2: React.FC = () => {
     
     // Initial slider/input values
     const [value, setValue] = useState<number>(1500);
-    const MAX = 10500;
+    const MAX = 10_500;
     const MIN = 0;
 
     // Handle changes on Slider
@@ -27,9 +27,9 @@ const Slider2: React.FC = () => {
 
     // Setting slider range
     const handleSliderRange = () => {
-        if (value < 0){
+        if (value < MIN){
             setValue(0);
-        } else if (value > 10500){
+        } else if (value > MAX){
             setValue(10500);
         }
     }
@@ -76,7 +76,7 @@ const Slider2: React.FC = () => {
             </FormControl>
 
         </div>
-    )
+    );
 };
 
 export default Slider2;
