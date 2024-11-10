@@ -7,7 +7,7 @@ interface Tag {
     value: number;
 }
 
-const tagList: Tag[] = [ // TODO: REPLACE THESE TAGS WITH ECOTROVE RELATED THINGS
+const tagList: Tag[] = [
     { id: 1, label: 'Central A/C', value: 6 },
     { id: 2, label: 'Central Heating', value: 4 },
     { id: 3, label: 'Freezer', value: 5 },

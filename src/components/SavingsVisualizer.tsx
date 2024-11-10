@@ -5,21 +5,9 @@ import ToggleUnitType from './/ToggleUnitType';
 import Tags from './/Tags';
 import {Typography} from '@mui/material';
 
-type VisualizerProps = {
-  // unitType: 'residential' | 'small business'
-  // sqft: number;
-  // tagItems: string[];
-  // onTagChange?: (tags: string[]) => void;
-  // onValueChange?: (value: number) => void;
-}
-
 const SavingsVisualizer: React.FC = () => {
 
   const [unitType, setUnitType] = useState<'residential' | 'small-business'>('residential');
-
-  // const handleUnitType = (event : React.MouseEvent<HTMLElement>, newValue: 'residential' | 'small-business') => {
-  //   setUnitType(newValue)
-  // };
 
   return (
     <Box 
