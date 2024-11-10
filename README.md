@@ -5,7 +5,7 @@ The Savings Visualizer is a React-based application designed to help users disco
 ## Features
 
 - **Customizable Inputs**: Easily choose if you're looking for savings for your home or small business, choose square footage, and appliances contributing significantly to your bill. 
-- **Dynamic Visualizations**: View your savings across different variables/.
+- **Dynamic Visualizations**: View your savings across different variables.
 - **Responsive Design**: Access your savings data on any device with a seamless experience.
 
 ## Installation
