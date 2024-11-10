@@ -1,26 +1,34 @@
+// App.tsx
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SavingsVisualizerDashboard from './components/SavingsVisualizerDashboard';
+import SavingsVisualizer from './components/SavingsVisualizer';
+import Slider2 from  './components/Slider2';
 
-function App() {
+const App: React.FC = () => {
+  // Sample items and initial calculation mode
+  const items = ['Electricity', 'Water', 'Gas', 'Internet'];
+  const calculationMode: 'household' | 'small business' = 'household';
+
+  // Handlers for tag and value changes
+  const handleTagChange = (tags: string[]) => {
+    console.log('Selected tags:', tags);
+  };
+
+  const handleValueChange = (value: number) => {
+    console.log('Slider/Input value:', value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-screen">
+      {/* <SavingsVisualizerDashboard
+        calculationMode={calculationMode}
+        items={items}
+        onTagChange={handleTagChange}
+        onValueChange={handleValueChange}
+      /> */}
+      <SavingsVisualizer />
     </div>
   );
-}
+};
 
 export default App;
